@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>Sand JS</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">Sand JS</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li class="active">
+                    <a href=".">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grains <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Grains/http/">Http</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li>
+                    <a href="https://github.com/SandJS/sand">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#sand-js">Sand JS</a></li>
+        
+            <li><a href="#what-is-sand">What is Sand?</a></li>
+        
+            <li><a href="#why-sand">Why Sand?</a></li>
+        
+            <li><a href="#whos-using-sand">Who's using Sand?</a></li>
+        
+            <li><a href="#requirements">Requirements</a></li>
+        
+            <li><a href="#show-me-the-code">Show me the code!</a></li>
+        
+            <li><a href="#miscellaneous-resources-gotchas-regarding-ecmascript-6">Miscellaneous Resources &amp; Gotchas regarding EcmaScript 6</a></li>
+        
+            <li><a href="#getting-started">Getting Started</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="sand-js">Sand JS <a href="https://travis-ci.org/SandJS/sand"><img alt="Build Status" src="https://travis-ci.org/SandJS/sand.svg?branch=master" /></a> <a href="http://badge.fury.io/js/sand"><img alt="npm version" src="https://badge.fury.io/js/sand.svg" /></a></h1>
+<h3 id="what-is-sand">What is Sand?</h3>
+<p>Sand is a lightweight, all-purpose Javascript application framework. Sand provides a simple, yet robust, application lifecycle and many pluggable clients and libraries. A Sand application loads only the clients and libraries that it requires to do its job, allowing the application to be as simple as possible.</p>
+<h3 id="why-sand">Why Sand?</h3>
+<p>In 3 words, <strong>Sand is simple</strong>.</p>
+<p>You can create <strong>ANY</strong> kind of Node.js application, script, or service using Sand.</p>
+<p>The simplest Sand application is shown below.</p>
+<pre><code class="JavaScript">var Sand = require('sand');
+new Sand().start(function () {
+  console.log('Hello, World!');
+});
+</code></pre>
+
+<p>Sand comes with many pre-built plugins supporting <a href="https://github.com/pocketly/sand-mysql">MySQL</a>, <a href="https://github.com/SandJS/elasticsearch">ElasticSearch</a>, <a href="https://github.com/pocketly/sand-memcache">Memcache</a>, <a href="https://github.com/SandJS/redis">Redis</a>, <a href="https://github.com/SandJS/riak">Riak</a>, <a href="https://github.com/SandJS/session">Sessions</a>, and <a href="https://github.com/SandJS">many</a> <a href="https://github.com/pocketly">more</a>.</p>
+<h3 id="whos-using-sand">Who's using Sand?</h3>
+<p><a href="http://pocketly.com">Pocketly</a></p>
+<p><a href="https://getwhym.com">Whym</a></p>
+<h3 id="requirements">Requirements</h3>
+<p>Currently, Sand is developed on <a href="https://iojs.org/">io.js</a> using EcmaScript 6. So far, Sand has not been extensively tested on Node.js v0.12, but we expect that it will work there too.</p>
+<h3 id="show-me-the-code">Show me the code!</h3>
+<p>See the <a href="https://github.com/SandJS/examples">examples repository</a>.</p>
+<h3 id="miscellaneous-resources-gotchas-regarding-ecmascript-6">Miscellaneous Resources &amp; Gotchas regarding EcmaScript 6</h3>
+<ul>
+<li>For a brief description of EcmaScript 6 Features, see <a href="https://github.com/lukehoban/es6features">here</a>.</li>
+<li>For more information on ES6 in io.js, see <a href="https://iojs.org/en/es6.html">here</a>.</li>
+<li>You will notice that many of the source files of Sand require <code>"use strict"</code> for compatibility with certain recently added keywords such as <code>let</code>, <code>const</code>, <code>class</code> and others.</li>
+</ul>
+<h3 id="getting-started">Getting Started</h3>
+<p>Sand has two components. The Sand core and the Sand Grain. These two components are tied together by the application lifecycle.</p>
+<h4 id="sand-core-application-lifecycle">Sand Core &amp; Application Lifecycle</h4>
+<p>The core of every Sand application is the <a href="https://www.npmjs.com/package/sand">sand</a> module.</p>
+<p>Sand was built to orchestrate an application's <strong>intitialization</strong>, <strong>startup</strong>, and <strong>shutdown</strong>. These are the three phases in the Sand application lifecycle.</p>
+<ol>
+<li>
+<p>The <strong>Initialization</strong> phase loads configuration and prepares the application to receive requests. The function <code>Sand#init(function() { // ... })</code> allows you to initialize or preload any resources your app requires before starting.</p>
+</li>
+<li>
+<p>The <strong>Startup</strong> phase starts the application. The <code>start</code> event will be fired on application startup. The function <code>Sand#start(function() { // ... })</code> starts the application and accepts an optional callback function as an argument. Note that the callback function is called <strong>after</strong> the application starts.</p>
+</li>
+<li>
+<p>The <strong>Shutdown</strong> phase gracefully closes down the application. The <code>shutdown</code> event will be fired on application shutdown.</p>
+</li>
+</ol>
+<p>Every application has access to the <code>sand</code> global variable which holds references to all the grains that your app has loaded.</p>
+<h4 id="sand-grains">Sand Grains</h4>
+<p>A Sand Grain is small piece of functionality required by an application. It is usually a client or library wrapper that autoloads its own configuration and provides convenience functions.</p>
+<p>Sand grains have the same three events as the app lifecycle. The Sand core calls the <code>SandGrain#init</code> and <code>SandGrain#shutdown</code> methods on each sand grain.</p>
+<p>A basic sand grain looks like this.</p>
+<pre><code class="JavaScript">&quot;use strict&quot;;
+
+const SandGrain = require('sand-grain');
+
+class Cheese extends SandGrain {
+
+  constructor() {
+    super();
+    this.name = 'cheese'; // the logging name
+    this.configName = 'cheese'; // the name of its configuration file
+    this.defaultConfig = {cheese: 'white cheddar'}; // a default config object when no config is specified
+    this.version = require('./package').version; // sets the grain's version
+  }
+
+  init(config, done) {
+    super.init(config); // this must be called
+
+    // configure your grain here
+    // `this.config` holds the config object for this grain
+
+    this.log(`I'm initializing! :D`);
+    done(); // indicates that this grain is done initializing
+  }
+
+  shutdown(done) {
+    this.log(`I'm shutting down! :(`);
+    // do shutdown stuff here (i.e. close the server gracefully, etc)
+    done();
+  }
+
+  jusEatinMyCheese() {
+    this.log(`Jus' eatin' my ${this.config.cheese}!`);
+    return 'ok? ok!';
+  }
+}
+
+module.exports = Cheese;
+</code></pre>
+
+<p>Every Sand Grain gets loaded onto the <code>sand</code> global variable on initialization.</p>
+<p>Import any sand Grain into your application using the <code>Sand#use</code> function before you call <code>Sand#start</code>.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script src="./js/base.js"></script>
+    </body>
+</html>
